@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffb6c1, #ffc3a0, #ffdde1, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  overflow-x: hidden;
+  border: 5px solid black;
+}
+
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 25px;
+  box-shadow: 0 10px 40px rgba(255, 105, 180, 0.4);
+  padding: 40px;
+  max-width: 850px;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.titulo {
+  animation: heartbeat 2s infinite;
+  color: #d63384;
+}
+
+@keyframes heartbeat {
+  0%, 100% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 200px;
+  height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border: 5px solid black;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.video-section {
+  margin-top: 30px;
+  border: 5px solid black;
+}
+
+.forgiveness {
+  margin-top: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  background: green;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 5px solid black;
+}
+
+button:hover {
+  background: blue;
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+#thanksMessage {
+  color: #e91e63;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#sadMessage {
+  color: #888;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.love-letter {
+  background: rgba(255, 240, 245, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+  font-style: italic;
+  box-shadow: 0 4px 15px rgba(255,182,193,0.3);
+}
+
+.final-message {
+  margin-top: 30px;
+  font-size: 1.2em;
+  color: #d63384;
+  font-weight: bold;
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  transform: rotate(45deg);
+  animation: float 6s ease-in infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: 10px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {transform: translateY(0) rotate(45deg); opacity: 1;}
+  100% {transform: translateY(-800px) rotate(45deg); opacity: 0;}
+}
+
+
+
+
+
+

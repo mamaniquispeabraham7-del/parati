@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perdóname, mi amor</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- 🎶 Música de fondo -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_05e3b4cf0d.mp3?filename=romantic-background-11276.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="container">
+    <div class="card">
+      <h1 class="titulo"> Lo siento, chules 😔</h1>
+      <p class="intro">
+        Me equivoqué y lo sé... pero mi corazón solo quiere hacer las paces contigo.  
+        Perdóname si te hice daño, no fue mi intención. 💌
+      </p>
+
+      <!-- 🖼️ Galería de imágenes -->
+      <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw7pNXgtrRxno1SbCbKB4kk2iovbVUlrOYNw&s" alt="Foto 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG8z5Wtx6BQxha5mdVpJM2HELL1zZTVx0GjQ&s" alt="Foto 2">
+        <img src="https://maestrovirtuale.com/wp-content/uploads/2019/10/pelis-rom%C3%A1nticas-1.jpg" alt="Foto 3">
+      </div>
+
+      <!-- 🎥 Video de TikTok -->
+      <div class="video-section">
+        <h2>🎥 Un video para ti</h2>
+        <blockquote class="tiktok-embed" 
+          cite="https://www.tiktok.com/@edgarerives_/video/7566462474459958536" 
+          data-video-id="7566462474459958536">
+          <section></section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </div>
+
+      <!-- ❤️ Sección de perdón -->
+      <div class="forgiveness">
+        <h2>💖 ¿Me perdonas? 💖</h2>
+        <div class="buttons">
+          <button id="forgiveBtn">Sí, te perdono 💋</button>
+          <button id="notYetBtn">Aún no 😢</button>
+        </div>
+        <p id="thanksMessage" class="hidden">Gracias, amor... Prometo cuidar tu corazón siempre ❤️</p>
+        <p id="sadMessage" class="hidden">Entiendo... seguiré esperando tu perdón 💔</p>
+      </div>
+
+      <!-- 💌 Carta romántica con botón -->
+      <div class="love-letter">
+        <button id="showLetterBtn">💌 Ver mi carta para ti 💌</button>
+        <div id="letterContent" class="hidden">
+          <h2>📜 Mi carta para ti</h2>
+          <p>
+            Desde el día en que te conocí, llenaste mi vida de luz y alegría.  
+            Lamento mis errores, pero también valoro cada instante contigo.  
+            Prometo escucharte más, cuidarte más y amarte con el alma. 💫
+          </p>
+        </div>
+      </div>
+
+      <p class="final-message">
+        No puedo cambiar el pasado, pero sí puedo prometerte un mejor futuro a tu lado ❤️
+        TE QUIERO AMOR
+      </p>
+    </div>
+  </div>
+
+  <!-- 💞 Corazones flotando -->
+  <div class="hearts">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+  <script>
+    const forgiveBtn = document.getElementById("forgiveBtn");
+    const notYetBtn = document.getElementById("notYetBtn");
+    const thanksMsg = document.getElementById("thanksMessage");
+    const sadMsg = document.getElementById("sadMessage");
+    const showLetterBtn = document.getElementById("showLetterBtn");
+    const letterContent = document.getElementById("letterContent");
+
+    forgiveBtn.addEventListener("click", () => {
+      thanksMsg.classList.remove("hidden");
+      sadMsg.classList.add("hidden");
+      forgiveBtn.style.display = "none";
+      notYetBtn.style.display = "none";
+    });
+
+    notYetBtn.addEventListener("click", () => {
+      sadMsg.classList.remove("hidden");
+      thanksMsg.classList.add("hidden");
+      notYetBtn.style.display = "none";
+    });
+
+    // 💌 Mostrar carta al presionar el botón
+    showLetterBtn.addEventListener("click", () => {
+      letterContent.classList.toggle("hidden");
+      if (!letterContent.classList.contains("hidden")) {
+        showLetterBtn.textContent = "💖 Ocultar carta 💖";
+      } else {
+        showLetterBtn.textContent = "💌 Ver mi carta para ti 💌";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
